@@ -1354,7 +1354,7 @@ a { color: var(--lav-700); }
         const parsed = JSON.parse(raw);
         applyRemote(parsed, false);
       } else {
-        seed();
+        save(true);
       }
     } catch (e) {
       console.warn('[KKX] 读取本地数据失败，使用默认数据', e);
@@ -1570,7 +1570,7 @@ a { color: var(--lav-700); }
   KKX.state = () => state;
   KKX.save = save;
   KKX.load = load;
-  KKX.reset = () => { state = defaultState(); seed(); save(true); };
+  KKX.reset = () => { state = defaultState(); save(true); };
 
   /* ---------------- 7. 数据聚合助手 ---------------- */
   const A = KKX.agg = {
@@ -1898,7 +1898,7 @@ a { color: var(--lav-700); }
     };
     $('#setClear').onclick = () => {
       closeModal();
-      confirmBox('清空所有数据？', '将删除全部待办、排班、学习与运动记录，并恢复为示例数据。此操作不可撤销。', () => {
+      confirmBox('清空所有数据？', '将删除全部待办、排班、学习与运动记录，并清空为空白状态（不再生成示例数据）。此操作不可撤销。', () => {
         KKX.reset(); paintProfile(); go('home'); toast('已重置');
       }, '确认清空');
     };
