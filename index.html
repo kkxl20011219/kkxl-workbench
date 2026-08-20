@@ -252,7 +252,7 @@ a { color: var(--lav-700); }
   color: var(--lav-700); font-variant-numeric: tabular-nums; letter-spacing: .5px;
   background: linear-gradient(120deg, rgba(255,255,255,.9), rgba(232,225,248,.8));
 }
-.menu-toggle { display: none; }
+.topbar .menu-toggle { display: none !important; }
 
 /* ---------- 7. 视图容器 ---------- */
 .views { flex: 1; padding: 4px 30px 46px; }
@@ -618,6 +618,7 @@ a { color: var(--lav-700); }
 }
 .tl-card:hover { transform: translateX(4px); box-shadow: var(--sh-sm); }
 .tl-title { font-size: 12.8px; font-weight: 600; }
+.tl-title svg { width: 1em; height: 1em; vertical-align: -0.18em; margin-right: 3px; }
 .tl-parent { font-size: 10.5px; color: var(--ink-muted); margin-top: 2px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
 .tl-scroll { max-height: 430px; overflow-y: auto; padding-right: 6px; }
 
@@ -944,7 +945,7 @@ a { color: var(--lav-700); }
     border-radius: 0 var(--r-xl) var(--r-xl) 0; box-shadow: var(--sh-xl);
   }
   .sidebar.open { transform: none; }
-  .menu-toggle { display: grid; }
+  .topbar .menu-toggle { display: grid !important; }
   .topbar { padding: 14px 18px 12px; }
   .views { padding: 4px 18px 40px; }
   .g-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
